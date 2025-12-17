@@ -31,7 +31,7 @@ public class _RiverChallenge {
                 {9, 8, 7}
         };
         // int startRow = 1, startCol = 1;
-        int[][] result = Solution.solve(heights1, 1, 1);
+        System.out.println("heights1 = " + Solution.print(heights1) + "\nstartRow = 1, startCol = 1");
         System.out.println("Solution.solve(heights1, 1, 1) = " + Solution.print(Solution.solve(heights1, 1, 1)));
         int[][] heights2 = {
                 {3, 2, 1, 3},
@@ -39,6 +39,7 @@ public class _RiverChallenge {
                 {9, 8, 7, 1},
                 {9, 8, 7, 1}
         };
+        System.out.println("heights2 = " + Solution.print(heights2) + "\nstartRow = 1, startCol = 0");
         System.out.println("Solution.solve(heights2, 1, 0) = " + Solution.print(Solution.solve(heights2, 1, 0)));
     }
 
@@ -47,10 +48,8 @@ public class _RiverChallenge {
         public static int[][] solve(int[][] heights, int startRow, int startCol) {
             int[][] result = new int[heights.length][heights[0].length];
 
-            for (int i = 0; i < result.length; i++) {
-                for (int j = 0; j < result[i].length; j++) {
-                    result[i][j] = -1;
-                }
+            for (int[] ints : result) {
+                Arrays.fill(ints, -1);
             }
             result[startRow][startCol] = 0;
             Queue<int[]> q = new LinkedList<>(List.of(new int[]{startRow, startCol}));
@@ -94,13 +93,13 @@ public class _RiverChallenge {
         public static String print(int[][] heights) {
             StringBuilder sb = new StringBuilder();
             sb.append("\n[\n");
-            for (int i = 0; i < heights.length; i++) {
+            for (int[] height : heights) {
                 sb.append("\t[");
-                for (int j = 0; j < heights[i].length; j++) {
-                    if (j == heights[i].length - 1) {
-                        sb.append("%2d".formatted(heights[i][j]));
+                for (int j = 0; j < height.length; j++) {
+                    if (j == height.length - 1) {
+                        sb.append("%2d".formatted(height[j]));
                     } else {
-                        sb.append("%2d".formatted(heights[i][j])).append(", ");
+                        sb.append("%2d".formatted(height[j])).append(", ");
                     }
                 }
                 sb.append("],\n");

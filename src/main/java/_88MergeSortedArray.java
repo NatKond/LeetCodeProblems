@@ -1,6 +1,4 @@
 import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Queue;
 
 /**
  * You are given two integer arrays nums1 and nums2, sorted in non-decreasing order,
