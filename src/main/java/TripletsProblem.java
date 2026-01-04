@@ -10,7 +10,7 @@ import java.util.*;
  * Notice that the order of the output and the order of the triplets does not matter.
  */
 
-public class _TripletsProblem {
+public class TripletsProblem {
 
     public static void main(String[] args) {
         int[] nums1 = {-1, 0, 1, 2, -1, -4};

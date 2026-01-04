@@ -1,5 +1,5 @@
 
-public class _LongestWord {
+public class LongestWord {
 
     public static void main(String[] args) {
         System.out.print(Solution.solve("fun&!! time"));

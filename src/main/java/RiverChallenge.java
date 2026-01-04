@@ -22,7 +22,7 @@ import java.util.*;
  * ]
  **/
 
-public class _RiverChallenge {
+public class RiverChallenge {
 
     public static void main(String[] args) {
         int[][] heights1 = {

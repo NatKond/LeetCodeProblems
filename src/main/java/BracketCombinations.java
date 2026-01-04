@@ -1,4 +1,4 @@
-public class _BracketCombinations {
+public class BracketCombinations {
 
     /**
      * Have the function BracketCombinations(num) read num which will be an integer greater than or equal to zero,
